@@ -19,6 +19,7 @@ app.post("/signup", (req, res) => {
 
     users.push({ username, password }); 
     res.json({"message": "Task done!"});
+    alert("Signed Up")
 
 });
 
@@ -38,6 +39,7 @@ app.post("/signin", (req, res) => {
         res.json({
             token
         });
+        alert("Signed In")
         
     }else{
         res.status(404).json({
