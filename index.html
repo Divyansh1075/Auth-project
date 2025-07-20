@@ -117,7 +117,7 @@ button:hover {
             const username = document.getElementById("signup-username").value;
             const password= document.getElementById("signup-password").value;
             
-            const response = await axios.post("http://localhost:3000/signup",{
+            const response = await axios.post("https://auth-project-mtnb.onrender.com/signup",{
                 username: username,
                 password: password
             })
@@ -129,7 +129,7 @@ button:hover {
             const username = document.getElementById("signin-username").value;
             const password= document.getElementById("signin-password").value;
             
-            const response = await axios.post("http://localhost:3000/signin",{
+            const response = await axios.post("https://auth-project-mtnb.onrender.com/signin",{
                 username: username,
                 password: password
             })
@@ -142,7 +142,7 @@ button:hover {
         async function getUserInformation(){
             const token = localStorage.getItem("token");
             if(token){
-                const response = await axios.get("http://localhost:3000/me", {
+                const response = await axios.get("https://auth-project-mtnb.onrender.com/me", {
                     headers:{
                         "Authorization": `Bearer ${token}`
                     }
